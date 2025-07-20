@@ -28,7 +28,7 @@ class _MainScreenState extends State<MainScreen> {
                     onPressed: () {
                       Navigator.of(
                         context,
-                      ).pushReplacementNamed(LoginScreen.routName);
+                      ).pushReplacementNamed(LoginScreen.routeName);
                     },
                     child: Image.asset(AssetsConstants.logoutIcon, scale: 0.7),
                   ),
@@ -60,6 +60,7 @@ class _MainScreenState extends State<MainScreen> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
+        shape: CircleBorder(),
         onPressed: () {},
         child: Image.asset(AssetsConstants.addButtonIcon),
       ),

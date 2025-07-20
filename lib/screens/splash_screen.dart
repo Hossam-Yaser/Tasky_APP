@@ -6,7 +6,7 @@ import 'package:tasky_app/screens/onboarding.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
-  static const String routName = 'SplashScreen';
+  static const String routeName = 'SplashScreen';
 
   @override
   State<SplashScreen> createState() => _SplashScreenState();

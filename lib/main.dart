@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:tasky_app/screens/appsection/main_screen.dart';
 import 'package:tasky_app/screens/auth/login_screen.dart';
+import 'package:tasky_app/screens/auth/register_screen.dart';
 import 'package:tasky_app/screens/onboarding.dart';
 import 'package:tasky_app/screens/splash_screen.dart';
 
 void main() {
-  runApp(const TaskyApp(routeName: SplashScreen.routName));
+  runApp(const TaskyApp(routeName: SplashScreen.routeName));
 }
 
 class TaskyApp extends StatelessWidget {
@@ -16,10 +17,11 @@ class TaskyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: SplashScreen.routName,
+      initialRoute: SplashScreen.routeName,
       routes: {
-        SplashScreen.routName: (context) => const SplashScreen(),
-        LoginScreen.routName: (context) => LoginScreen(),
+        SplashScreen.routeName: (context) => const SplashScreen(),
+        LoginScreen.routeName: (context) => LoginScreen(),
+        RegisterScreen.routeName: (context) => RegisterScreen(),
         Onboarding.routeName: (context) => Onboarding(),
         MainScreen.routeName: (context) => MainScreen(),
       },
