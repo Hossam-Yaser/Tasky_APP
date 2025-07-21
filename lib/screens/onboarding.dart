@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'package:tasky_app/core/constant/assets_constants.dart';
 import 'package:tasky_app/core/utils/app_color.dart';
-import 'package:tasky_app/screens/appsection/main_screen.dart';
+import 'package:tasky_app/screens/auth/login_screen.dart';
+import 'package:tasky_app/screens/onboarding_preferances.dart';
 
 class Onboarding extends StatefulWidget {
   const Onboarding({super.key});
@@ -90,16 +91,18 @@ class _OnboardingState extends State<Onboarding> {
               child: Align(
                 alignment: Alignment.centerRight,
                 child: MaterialButton(
-                  onPressed: () {
+                  onPressed: () async {
                     if (index < onBoardingList.length - 1) {
                       controller.nextPage(
                         duration: Duration(microseconds: 500),
                         curve: Curves.easeIn,
                       );
                     } else {
-                      Navigator.of(
+                      await OnboardingPreferences.setHasSeenOnboarding();
+                      Navigator.pushReplacementNamed(
                         context,
-                      ).pushReplacementNamed(MainScreen.routeName);
+                        LoginScreen.routeName,
+                      );
                     }
                   },
                   color: Color(mainColor),
