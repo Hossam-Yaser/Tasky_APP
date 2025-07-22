@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tasky_app/core/constant/assets_constants.dart';
 import 'package:tasky_app/core/utils/app_color.dart';
+import 'package:tasky_app/screens/appsection/empty_screen.dart';
 import 'package:tasky_app/screens/appsection/widgets/show_add_task_modal.dart';
 import 'package:tasky_app/screens/auth/login_screen.dart';
 
@@ -37,8 +38,8 @@ class _MainScreenState extends State<MainScreen> {
                 ],
               ),
               SizedBox(height: 15),
-              // EmptyScreen(),
-              HomeScreenTextFormField(),
+              EmptyScreen(),
+              // HomeScreenTextFormField(),
             ],
           ),
         ),
